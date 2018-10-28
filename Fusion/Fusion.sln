@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelServicesHost", "DomainModelServicesHost\DomainModelServicesHost.csproj", "{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelServices", "DomainModelServices\DomainModelServices.csproj", "{EDC26B27-B154-4BAF-B144-E6D61D400BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
