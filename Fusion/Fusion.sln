@@ -3,11 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelServicesHost", "DomainModelServicesHost\DomainModelServicesHost.csproj", "{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelServices", "DomainModelServices\DomainModelServices.csproj", "{EDC26B27-B154-4BAF-B144-E6D61D400BA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{82EC2193-2519-4A7A-82C7-DD5F19D4F438}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{33E18FD7-27AC-4BA4-AB8A-FE00591372D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{7F02B28A-3F58-4833-BA75-116110308621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScripts", "DBScripts", "{40F98214-BC45-42A2-A30E-513D3AB1E62F}"
+	ProjectSection(SolutionItems) = preProject
+		CreateMachineTable.sql = CreateMachineTable.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MockData", "MockData", "{CFD04833-1003-4459-BF2E-A3E991B63864}"
+	ProjectSection(SolutionItems) = preProject
+		Machine.sql = Machine.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModelServiceHost", "DomainModelServiceHost\DomainModelServiceHost.csproj", "{90ACA7CE-B031-45B0-8F7E-4624C36770D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3884EB86-8F77-4D09-84FF-3CC0C8793AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDC26B27-B154-4BAF-B144-E6D61D400BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,8 +39,25 @@ Global
 		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EC2193-2519-4A7A-82C7-DD5F19D4F438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EC2193-2519-4A7A-82C7-DD5F19D4F438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EC2193-2519-4A7A-82C7-DD5F19D4F438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EC2193-2519-4A7A-82C7-DD5F19D4F438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F02B28A-3F58-4833-BA75-116110308621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F02B28A-3F58-4833-BA75-116110308621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F02B28A-3F58-4833-BA75-116110308621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F02B28A-3F58-4833-BA75-116110308621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90ACA7CE-B031-45B0-8F7E-4624C36770D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90ACA7CE-B031-45B0-8F7E-4624C36770D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90ACA7CE-B031-45B0-8F7E-4624C36770D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90ACA7CE-B031-45B0-8F7E-4624C36770D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F02B28A-3F58-4833-BA75-116110308621} = {33E18FD7-27AC-4BA4-AB8A-FE00591372D5}
+		{40F98214-BC45-42A2-A30E-513D3AB1E62F} = {33E18FD7-27AC-4BA4-AB8A-FE00591372D5}
+		{CFD04833-1003-4459-BF2E-A3E991B63864} = {33E18FD7-27AC-4BA4-AB8A-FE00591372D5}
 	EndGlobalSection
 EndGlobal

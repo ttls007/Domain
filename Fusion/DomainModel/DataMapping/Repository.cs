@@ -4,7 +4,7 @@ using System.Data.Linq;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Husky.DomainModel.DataMapping
+namespace HL.DomainModel.DataMapping
 {
    public interface IRepository<T> where T : class
    {

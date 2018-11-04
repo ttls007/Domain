@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using Ninject.Core;
 using Ninject.Core.Creation;
 using Ninject.Core.Activation;
+using Husky.MessageRouting;
 
-namespace Husky.DomainModel.DataMapping
+namespace HL.DomainModel.DataMapping
 {
    public interface IMockObject
    {
@@ -52,27 +53,27 @@ namespace Husky.DomainModel.DataMapping
       public override void Load()
       {
          Bind<IUnitOfWork>().To<SqlUnitOfWork>();
-         Bind<ITimeManager>().To<TimeManager>();
-         Bind<IStopwatch>().To<StopwatchAdapter>();
+         //Bind<ITimeManager>().To<TimeManager>();
+         //Bind<IStopwatch>().To<StopwatchAdapter>();
 
-         // Managers
-         Bind<IMachineProductionManager>().To<MachineProductionManager>();
-         Bind<IMachineManager>().To<MachineManager>();
-         Bind<IDataCollectorManager>().To<DataCollectorManager>();
-         Bind<ILicenseManager>().To<LicenseManager>();
-         Bind<IFactoryManager>().To<FactoryManager>();
-         Bind<IShiftManager>().To<ShiftManager>();
-         Bind<IEnergyManagementManager>().To<EnergyManagementManager>();
+         //// Managers
+         //Bind<IMachineProductionManager>().To<MachineProductionManager>();
+         //Bind<IMachineManager>().To<MachineManager>();
+         //Bind<IDataCollectorManager>().To<DataCollectorManager>();
+         //Bind<ILicenseManager>().To<LicenseManager>();
+         //Bind<IFactoryManager>().To<FactoryManager>();
+         //Bind<IShiftManager>().To<ShiftManager>();
+         //Bind<IEnergyManagementManager>().To<EnergyManagementManager>();
          
-         // Notifiers
-         Bind<IMachineNotifier>().To<MachineNotifier>();
-         Bind<IErpNotifier>().To<ErpNotifier>();
+         //// Notifiers
+         //Bind<IMachineNotifier>().To<MachineNotifier>();
+         //Bind<IErpNotifier>().To<ErpNotifier>();
 
-         // Misc. Objects
-         //Bind<IPlusLicense>().To<PlusLicense>();
-         Bind<IMessageRouterManager>().ToProvider<MessageRouterManagerProvider>();
-         Bind(typeof(IThreadPoolHelper<>)).To(typeof(ThreadPoolHelper<>));
-         Bind<IDomainModelServicesAppSettings>().To<DomainModelServicesAppSettings>();
+         //// Misc. Objects
+         ////Bind<IPlusLicense>().To<PlusLicense>();
+         //Bind<IMessageRouterManager>().ToProvider<MessageRouterManagerProvider>();
+         //Bind(typeof(IThreadPoolHelper<>)).To(typeof(ThreadPoolHelper<>));
+         //Bind<IDomainModelServicesAppSettings>().To<DomainModelServicesAppSettings>();
       }
    }
 
@@ -327,7 +328,7 @@ namespace Husky.DomainModel.DataMapping
 
    public class MessageRouterManagerProvider : SimpleProvider<IMessageRouterManager>
    {
-      private const string MessageRouterManagerName = "ShotscopeNxMessageRouterManager";
+      private const string MessageRouterManagerName = "HLMessageRouterManager";
 
       private static IMessageRouterManager _MessageRouterManager;
       private static readonly object _ExceptionHandlerLock = new Object();

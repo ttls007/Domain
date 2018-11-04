@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D8D1125-56B4-4D8F-8F98-3C832B1B064C}</ProjectGuid>
+    <ProjectGuid>{7F02B28A-3F58-4833-BA75-116110308621}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HL.DomainModel</RootNamespace>
-    <AssemblyName>DomainModel</AssemblyName>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,16 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Husky.MessageRouting">
-      <HintPath>..\ExternalDependencies\Husky.MessageRouting.dll</HintPath>
-    </Reference>
-    <Reference Include="Ninject.Core">
-      <HintPath>..\ExternalDependencies\Ninject.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,26 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataMapping\IoC.cs" />
-    <Compile Include="DataMapping\OperationalDataContext.cs" />
-    <Compile Include="DataMapping\Repository.cs" />
-    <Compile Include="DataMapping\UnitOfWork.cs" />
-    <Compile Include="IMachineManager.cs" />
-    <Compile Include="Machine.cs" />
-    <Compile Include="MachineManager.cs" />
+    <Compile Include="FusionOperationalDBSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataMapping\BuildOperational_XMLMap_and_Entity.bat" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="DataMapping\OperationalMap.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Database\Database.csproj">
-      <Project>{7f02b28a-3f58-4833-ba75-116110308621}</Project>
-      <Name>Database</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
